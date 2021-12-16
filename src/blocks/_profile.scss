@@ -8,9 +8,9 @@
     }
 
     &__inner{
-        background-color: #E8E8EB;
+        backdrop-filter: blur(25px) saturate(0%);
+        background-color: rgba(232, 232, 235, 0.8);
         height: 100%;
-        opacity: 0.8;
         padding: 20px;
     }
 
@@ -51,7 +51,7 @@
         justify-content: center;
         width: 22px;
         height: 22px;
-        background-color: #f3f3f5;
+        background-color: #ececec;
         border-radius: 50%;
 
         &:not(:last-child){
@@ -99,6 +99,7 @@
             margin-bottom: 11px;
         }
     }
+    
     &__label {
         font-size: 12px;
         color: #5F6164;

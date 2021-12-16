@@ -1,5 +1,6 @@
 .chats{
-    background-color: #25272A;
+    backdrop-filter: blur(20px) saturate(0%);
+    background-color: rgba(37, 39, 42, 0.75);
     padding: 35px 24px;
 
     &__row{
