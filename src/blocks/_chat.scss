@@ -1,0 +1,145 @@
+.chat{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 22px 14px;
+        min-height: 75px;
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+    &__row{
+        display: flex;
+        align-items: center;
+    }
+
+    &__channel-name{
+        font-size: 20px;
+        font-weight: 700;
+        margin-right: 5px;
+
+        &::before{
+            content: "#";
+        }
+    }
+    
+    &__icon{
+        width: 15px;
+        height: 15px;
+        fill: #000;
+        opacity: 0.4;
+        cursor: pointer;
+    }
+
+    &__bell{
+        margin-right: 24px;
+    }
+
+    &__bell--active{
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content: "";
+            width: 5px;
+            height: 5px;
+            top: -1px;
+            right: -4px;
+            border-radius: 50%;
+            background-color: #FD4948;
+        }
+    }
+
+    &__sittings {
+        position: relative;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #cecece;
+        cursor: pointer;
+
+        &::before,
+        &::after{ 
+            position: absolute;
+            content: "";
+            width: inherit;
+            height: inherit;
+            background-color: inherit;
+            border-radius: inherit; 
+        }
+
+        &::before{
+            top: -6px;
+        }
+        &::after{
+            top: 6px;
+        }
+    }
+
+    &__icon--clip{
+        width: 14px;
+        height: 22px;
+        margin-right: 20px;
+    }
+
+    &__icon--microphone{
+        width: 14px;
+        height: 22px;
+        margin-right: 20px;
+    }
+
+    &__main{
+        padding: 22px;
+        flex-basis: 100%;
+    }
+
+    &__viewers{
+        display: flex;
+        align-items: center;
+        margin-right: 24px;
+    }
+
+    &__search{
+        margin-right: 24px;
+    }
+
+    &__massage{
+        &:not(:last-child){
+            margin-bottom: 13px;
+        }
+
+        &:not(:first-child){
+            margin-top: 13px;
+        }
+    }
+
+    &__field{
+        display: flex;
+        align-items: center;
+        min-height: 72px;
+        padding: 0 22px;
+        border-top: 1px solid #d8d8d8;
+    }
+
+    &__input{
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: rgb(58, 58, 58);
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+
+        &::placeholder{
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+        }
+    }
+}

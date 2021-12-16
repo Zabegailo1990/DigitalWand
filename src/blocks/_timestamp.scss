@@ -1,0 +1,29 @@
+.timestamp{
+    display: flex;
+    flex-basis: fill;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    line-height: 18px;
+    color: #8D8D8D;
+    
+
+    &::before,
+    &::after{
+        content: "";
+        flex-grow: 1;
+        height: 1px;
+        background-color: #000;
+        opacity: 0.16;
+    }
+
+    &::before{
+        margin-right: 14px;
+    }
+
+    &::after{
+        margin-left: 14px;
+    }
+
+}
+
