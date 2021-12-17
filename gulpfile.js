@@ -44,19 +44,6 @@ gulp.task('scssProd', function(){
         .pipe(gulp.dest('app/css'))
 })
 
-    // Для команды gulp dev
-gulp.task('scssDev', function(){
-    return gulp.src('src/blocks/main.scss')
-        .pipe(scss({
-            outputStyle: 'expanded',
-            indentWidth: 4,
-        }))
-        .pipe(autoprefix(['last 5 versions']))
-        .pipe(rename({suffix: '.min', prefix : ''}))
-        .pipe(gulp.dest('app/css'))
-        .pipe(browserSync.reload({stream: true}));
-})
-
 
 
 // Минификация JS***
@@ -160,7 +147,7 @@ gulp.task('pngSprite', function(){
 
 //Watch***
 gulp.task('watch', function(){
-	gulp.watch('src/blocks/**/*.scss', gulp.parallel('scssDev'));
+	gulp.watch('src/blocks/**/*.scss', gulp.parallel('scssProd'));
     gulp.watch('src/blocks/**/*.js', gulp.parallel('js'));
 	gulp.watch('app/*.html', gulp.parallel('html'));
 });
@@ -175,7 +162,7 @@ gulp.task('del', function(){
 
 
 // Команда для разработки***
-gulp.task('dev', gulp.parallel('scssDev', 'watch', 'browserSync'));
+gulp.task('dev', gulp.parallel('scssProd', 'watch', 'browserSync'));
 
 // Команда сборки***
     // "Перед исполнением команды, необходимо предварительно отключить команду Dev, иначе css файл не минифицируется "

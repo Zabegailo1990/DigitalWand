@@ -61,9 +61,7 @@
     }
 
     &__add{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: relative;
         border: none;
         background-color: #25272A;
         border-radius: 50%;
@@ -73,8 +71,17 @@
     }
 
     &__icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 14px;
         height: 14px;
         fill: rgb(139, 137, 137);
+        transition: all .5s;
+
+        &:hover{
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
     }
 }
